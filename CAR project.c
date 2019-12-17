@@ -7,7 +7,7 @@
 
 void printMap(int n, int m, int map[n][m]){ //function for printing the map
 	printf("\n");
-	for(int i = 0; i < n;i++)
+	for(int i = 0; i < m;i++)
 		printf("______");	
 	
 	printf("\n");
@@ -15,7 +15,7 @@ void printMap(int n, int m, int map[n][m]){ //function for printing the map
 	for(int i = 0; i < n;i++){
 		printf("|");
 		
-		for(int i = 0; i < n;i++)
+		for(int i = 0; i < m;i++)
 			printf("     |");
 		
 		printf("\n|");
@@ -34,7 +34,7 @@ void printMap(int n, int m, int map[n][m]){ //function for printing the map
 	
 		printf("\n|");
 	
-		for(int j = 0; j < n;j++)
+		for(int j = 0; j < m;j++)
 			printf("_____|");
 		
 		printf("\n");
@@ -98,7 +98,9 @@ int main(){
 	}
 	bool moved[x][y];
 	bool wanted = false;
-
+	printMap(x,y,car);
+	_getch();
+	system("cls");
 	while (wanted == false){ //chase game starts from here
 		printMap(x,y,car);
 		
