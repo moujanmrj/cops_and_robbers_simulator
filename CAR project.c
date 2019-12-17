@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
+#include <windows.h>
 
 void printMap(int n, int m, int map[n][m]){ //function for printing the map
 	printf("\n");
@@ -23,11 +24,11 @@ void printMap(int n, int m, int map[n][m]){ //function for printing the map
 			if(map[i][j] == -1)
 				printf("     |");
 			else if (map[i][j] == -10)
-				printf("  *  |");
+				printf(" \033[1;31m*\033[0m\033[1;34m*\033[0m\033[1;31m*\033[0m |");
 			else if (map[i][j] == -2)
-				printf("  T  |");
+				printf("\033[1;31m  T  \033[0m|");
 			else
-				printf(" D%d  |" , map[i][j]);
+				printf("\033[1;34m D%d  \033[0m|" , map[i][j]);
 		}
 
 	
@@ -82,7 +83,6 @@ int main(){
 	for (int i=0;i<station;i++){
 	printf ("Enter number of police in sation (%d) : ",i);
 	scanf ("%d",&police);
-//	int sheriff[1000][1000][2];
 	countpolice++;
 		for (int j=0;j<police;j++){
 			int randx = rand()%x;
