@@ -49,6 +49,7 @@ int sign(int a , int b){ //comparing the cop and robber coordinates and then cha
 }
 
 int main(){
+	system("COLOR F0");
 	int x,y,countpolice=0,countrobber=0;
 	
 	printf ("Enter rows and columns : ");
